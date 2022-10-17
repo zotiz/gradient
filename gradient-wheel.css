@@ -1,0 +1,71 @@
+div#rect {
+  width: 500px;
+  height: 500px;
+  border: 10px solid green;
+  margin: 100px auto;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow:  0 0 10px gray;
+  position:relative;
+}
+#arrow {
+  height: 15px;
+  width:45px;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  background:rebeccapurple;
+  position: absolute;
+  z-index: 1;
+  top: 250px;
+  left: 0;
+  animation-name: arrow;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  
+}
+@keyframes arrow{
+  from {
+    width: 45px;
+  }
+  to{
+  width: 100px;
+  }
+}
+
+div#circle {
+  font-size: 35px;
+  text-align: center;
+  padding: 20px;
+  color: lightgreen;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  border: 10px groove red;
+  margin: 100px auto;
+  background:repeating-conic-gradient(rgb(18, 15, 15) 0deg, rgb(45, 41, 41) 10deg , red 10deg,red 30deg,  green 30deg,green 50deg, blue 50deg, blue 80deg, yellow 80deg, yellow 100deg, rgb(0, 255, 183) 100deg, blue 120deg, blue 140deg);
+  animation-name: example;
+  animation-duration: 5s;
+  animation-timing-function:linear;
+  animation-iteration-count: infinite;
+}
+@keyframes example {
+  0% {
+    transform: rotate(0deg);
+    
+    background:repeating-conic-gradient(rgb(245, 241, 241) 0deg, red 10deg,  green 30deg,green 50deg, blue 80deg, yellow 100deg, blue 120deg, blue 140deg);
+  }
+  25%{
+    background:repeating-conic-gradient(rgb(244, 240, 240) 0deg, rgb(45, 41, 41) 10deg ,rgba(255, 47, 0, 0.831) 30deg, rgba(0, 209, 98, 0.835) 50deg, rgba(115, 29, 237, 0.905) 100deg, rgba(4, 189, 192, 0.796) 120deg, rgba(203, 4, 4, 0.768) 140deg);
+  }
+  50% {
+    background:repeating-conic-gradient(rgb(107, 235, 44) 0deg, rgb(49, 246, 49) 10deg ,rgb(7, 222, 246) 30deg,rgb(3, 109, 246) 50deg, rgb(254, 6, 234) 80deg, rgb(251, 163, 10) 100deg, rgb(255, 19, 113) 120deg, rgb(247, 26, 151) 140deg)}
+  75% {
+    background:repeating-conic-gradient(rgb(49, 88, 30) 0deg, rgb(62, 209, 235) 10deg,rgb(46, 223, 243) 30deg,rgb(86, 140, 210) 50deg, rgb(252, 105, 242) 80deg, rgb(250, 186, 75) 100deg, rgb(253, 7, 105) 120deg, rgb(195, 49, 248) 140deg)
+  }
+  100% {
+    transform:rotate(360deg);
+    background:repeating-conic-gradient(rgb(49, 88, 30) 0deg, rgb(35, 93, 35) 10deg ,rgb(42, 94, 100) 30deg,rgb(86, 140, 210) 50deg,  rgb(174, 93, 168) 80deg, rgb(188, 135, 43) 100deg, rgb(74, 215, 175) 100deg, rgb(190, 91, 131) 120deg, rgb(160, 60, 117) 140deg)}
+  }
